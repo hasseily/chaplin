@@ -99,7 +99,7 @@ define [
       expect(stub).was.calledOnce()
       [passedPath, passedOptions, passedCallback] = stub.firstCall.args
       expect(passedPath).to.be path
-      expect(passedOptions).to.eql {queryString}
+      expect(passedOptions).to.eql {query: queryString}
       expect(passedCallback).to.be.a 'function'
       mediator.unsubscribe '!router:route', stub
 
